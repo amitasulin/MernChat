@@ -51,6 +51,13 @@ function Signup() {
     e.preventDefault();
     if (!image) return alert("Please upload your profile picture");
     const url = await uploadImage(image);
+    // todo send to server signup
+    const data = {
+      email,
+      name,
+      password,
+      picture: url,
+    };
     console.log(url);
   }
 
